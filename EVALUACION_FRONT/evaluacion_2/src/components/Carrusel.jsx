@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, MobileStepper, useTheme, Fade } from '@mui/material';
+import { Box, useTheme, Fade } from '@mui/material';
 
 // Imágenes de ejemplo para el carrusel
 const images = [
@@ -47,7 +47,7 @@ const Carrusel = () => {
         alignItems: 'center',
         p: 0,
         bgcolor: 'transparent',
-        aspectRatio: '16/9', // Mantiene la relación de aspecto en todos los dispositivos
+        aspectRatio: '16/9',
       }}
     >
       <Fade in={fadeIn} timeout={400}>
@@ -68,35 +68,6 @@ const Carrusel = () => {
           alt=""
         />
       </Fade>
-      {/* Indicador de imagen actual, subido y con sombra */}
-      <Box
-        sx={{
-          width: '100%',
-          display: 'flex',
-          justifyContent: 'center',
-          position: 'absolute',
-          left: 0,
-          bottom: { xs: 8, sm: 16, md: 24 }, // Más cerca del borde en móvil
-          zIndex: 2,
-          pointerEvents: 'auto',
-        }}
-      >
-        <MobileStepper
-          steps={maxSteps}
-          position="static"
-          activeStep={activeStep}
-          nextButton={null}
-          backButton={null}
-          sx={{
-            bgcolor: 'rgba(255,255,255,0.85)',
-            boxShadow: theme.shadows[3],
-            width: 'auto',
-            borderRadius: 8,
-            px: 2,
-            pointerEvents: 'auto',
-          }}
-        />
-      </Box>
     </Box>
   );
 };
