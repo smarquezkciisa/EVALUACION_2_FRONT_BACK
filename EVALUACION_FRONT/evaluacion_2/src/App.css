@@ -1,3 +1,11 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  /* Degradado suave de azul oscuro a naranjo oscuro */
+  background: linear-gradient(180deg, #232526 0%, #314755 60%, #ff914d 100%);
+  background-attachment: fixed;
+}
+
 #root {
   margin: 0 auto;
   padding: 2rem;

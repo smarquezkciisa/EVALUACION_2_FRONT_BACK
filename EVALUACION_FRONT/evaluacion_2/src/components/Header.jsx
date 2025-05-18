@@ -12,7 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import logoCholchol from '../assets/logo_cholchol.png';
 
-const pages = ['Contactanos', 'Mision', 'Vision', 'Quienes somos','Productos'];
+const pages = ['Contactanos', 'Mision', 'Vision', 'Quienes somos'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

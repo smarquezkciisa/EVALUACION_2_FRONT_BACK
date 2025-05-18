@@ -47,7 +47,6 @@ const Carrusel = () => {
         alignItems: 'center',
         p: 0,
         bgcolor: 'transparent',
-        aspectRatio: '16/9',
       }}
     >
       <Fade in={fadeIn} timeout={400}>
@@ -55,14 +54,13 @@ const Carrusel = () => {
           component="img"
           sx={{
             width: '100%',
-            height: '100%',
+            height: { xs: 180, sm: 320, md: 400 },
             minHeight: 140,
-            maxHeight: { xs: '50vw', sm: 400, md: 500 },
+            maxHeight: 500,
             objectFit: 'cover',
             borderRadius: 2,
             boxShadow: theme.shadows[3],
             display: 'block',
-            aspectRatio: '16/9',
           }}
           src={images[activeStep].imgPath}
           alt=""
